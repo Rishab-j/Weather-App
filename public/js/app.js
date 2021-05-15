@@ -30,13 +30,11 @@ const displayCurrent = (data,location) => {
     current.classList.remove("hide");
     message.textContent = "";
 
-    var iconurl = "http://openweathermap.org/img/w/" + data.weather.icon + ".png";
-
     currentHeading.textContent = `Current Weather in ${location}`;
     currentTemp.textContent = `${Math.ceil(data.temp)}\u00B0C`;
     currentFeel.textContent = `Feels like ${data.feels_like}\u00B0C`;
     currentDesc.textContent = `${data.weather.desc}`;
-    currentIcon.src = iconurl;
+    currentIcon.src = `http://openweathermap.org/img/w/${data.weather.icon}.png`;
 };
 
 const getWeek = (data,i) => {
